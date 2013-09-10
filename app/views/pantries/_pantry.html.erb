@@ -1,0 +1,12 @@
+<div class="pantry">
+  <% if pantry.pasta_processed? %>
+    <%= link_to image_tag(pantry.pasta_url(:thumb)), pantry %>
+  <% else %>
+    <em>Processing...</em>
+  <% end %>
+  <div class="name"><%= pantry.name %></div>
+  <div class="actions">
+    <%= link_to "edit", edit_pantry_path(pantry) %> |
+    <%= link_to "remove", pantry, confirm: "are you super sure?", method: :delete %>
+  </div>
+</div>

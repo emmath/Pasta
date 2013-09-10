@@ -1,0 +1,10 @@
+
+  <h1><% @pantry.name %></h1>
+  <p><%= image_tag @pantry.pasta_url %></p>
+  <p>
+    <%= link_to "edit", edit_pantry_path(@pantry) %>
+    <%= link_to "remove", @pantry, confirm: "are you super sure?", method: :delete %>
+    <%= link_to "Back to Pantry", pantries_path %>
+  </p>
+
+

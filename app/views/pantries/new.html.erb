@@ -1,0 +1,8 @@
+<% @title = @pantry.name %>
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Add a Pantry", new_pantry_path %> |
+  <%= link_to "Remove Pantry", @pantry, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View Pantries", pantries_path %>
+</p>
