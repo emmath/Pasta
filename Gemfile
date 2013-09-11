@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 gem 'carrierwave'
 
@@ -26,6 +26,11 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem "mini_magick"
